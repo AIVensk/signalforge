@@ -1,0 +1,36 @@
+npm notice run signalforge@0.1.0 test
+npm notice run npm run build && tsc -p tsconfig.test.json && node --test --experimental-test-isolation=none dist-test/test/*.test.js
+npm notice run signalforge@0.1.0 build
+npm notice run tsc -p tsconfig.json
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+✔ CLI exports a complete packet, replay verifies, and tampering fails verification (562.528447ms)
+✔ capture without a key fails without making a request (160.86385ms)
+✔ decimal conversion is exact, including values unsafe as JavaScript integers (2.70344ms)
+✔ actual SDK curves conserve gross input, fees, and unused budget; probes are monotonic (12.63509ms)
+✔ first segment quote agrees with independent integer constant-liquidity equations (5.433773ms)
+✔ different caps and fees remain valid across an input matrix (20.524671ms)
+✔ thin, stale and null-price fixtures fail evidence checks while the anchor passes (2.123995ms)
+✔ stale, future, resolved and missing anchors block weighted results (18.163725ms)
+✔ duplicate trades cannot inflate the recent count, future activity is withheld (0.533198ms)
+✔ snapshot identity checks reject duplicated markets and mixed-market trade tapes (0.562294ms)
+✔ replay is deterministic, key order is irrelevant, altered inputs change run identity (12.915095ms)
+✔ HTML is self-contained, fixtures are conspicuous, external titles are escaped, CSV is numeric only (8.628813ms)
+✔ synthetic fixture provenance does not claim a successful API collection (6.997498ms)
+✔ authenticated GET uses fixed origin and manual redirects, never a key in the URL (8.533941ms)
+✔ redirects, malformed JSON, non-JSON and oversized bodies are rejected (1.301294ms)
+✔ bounded retry honors Retry-After on 429 and does not retry unauthorized reads (0.417247ms)
+✔ date Retry-After is interpreted against the clock; excessive waits fail closed (0.460399ms)
+✔ catalog pagination deduplicates IDs and marks a repeated cursor as partial (1.157589ms)
+✔ bounded catalog pages and detail failures retain missing prices explicitly (0.516736ms)
+✔ market IDs cannot alter URL paths, and trade endpoint identity must match (0.149265ms)
+✔ collection and credential inputs reject before network activity (0.087406ms)
+✔ terminal catalog pages accept the documented omitted cursor (0.11524ms)
+✔ single-market reads reject another market even when its schema is valid (0.262411ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 980.242144

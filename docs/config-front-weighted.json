@@ -1,0 +1,146 @@
+{
+  "disclaimer": "Analysis only. BN fields are decimal strings. Rebuild from launch.json using the pinned SDK, do not pass this JSON directly to transaction methods.",
+  "sdk": {
+    "sdk": "@meteora-ag/dynamic-bonding-curve-sdk",
+    "version": "1.5.13"
+  },
+  "inputHash": "02af2aa1cf71d16f1868d738e4c9907209472cfa83c115035c8a674980425917",
+  "curve": "front-weighted",
+  "config": {
+    "poolFees": {
+      "baseFee": {
+        "cliffFeeNumerator": "10000000",
+        "firstFactor": 0,
+        "secondFactor": "0",
+        "thirdFactor": "0",
+        "baseFeeMode": 0
+      },
+      "dynamicFee": null
+    },
+    "activationType": 1,
+    "collectFeeMode": 0,
+    "migrationOption": 1,
+    "tokenType": 0,
+    "tokenDecimal": 6,
+    "migrationQuoteThreshold": "38481408396",
+    "partnerLiquidityPercentage": 0,
+    "partnerPermanentLockedLiquidityPercentage": 100,
+    "creatorLiquidityPercentage": 0,
+    "creatorPermanentLockedLiquidityPercentage": 0,
+    "sqrtStartPrice": "82496347424711897",
+    "lockedVesting": {
+      "amountPerPeriod": "0",
+      "cliffDurationFromMigrationTime": "0",
+      "frequency": "0",
+      "numberOfPeriod": "0",
+      "cliffUnlockAmount": "0"
+    },
+    "migrationFeeOption": 2,
+    "tokenSupply": {
+      "preMigrationTokenSupply": "1000000000000000",
+      "postMigrationTokenSupply": "1000000000000000"
+    },
+    "creatorTradingFeePercentage": 0,
+    "migratedPoolFee": {
+      "collectFeeMode": 0,
+      "dynamicFee": 0,
+      "poolFeeBps": 0
+    },
+    "poolCreationFee": "0",
+    "partnerLiquidityVestingInfo": {
+      "vestingPercentage": 0,
+      "bpsPerPeriod": 0,
+      "numberOfPeriods": 0,
+      "cliffDurationFromMigrationTime": 0,
+      "frequency": 0
+    },
+    "creatorLiquidityVestingInfo": {
+      "vestingPercentage": 0,
+      "bpsPerPeriod": 0,
+      "numberOfPeriods": 0,
+      "cliffDurationFromMigrationTime": 0,
+      "frequency": 0
+    },
+    "migratedPoolBaseFeeMode": 0,
+    "migratedPoolMarketCapFeeSchedulerParams": {
+      "numberOfPeriod": 0,
+      "sqrtPriceStepBps": 0,
+      "schedulerExpirationDuration": 0,
+      "reductionFactor": "0"
+    },
+    "enableFirstSwapWithMinFee": false,
+    "compoundingFeeBps": 0,
+    "padding": [],
+    "curve": [
+      {
+        "sqrtPrice": "88651220750510565",
+        "liquidity": "136674558010722441420000000000000"
+      },
+      {
+        "sqrtPrice": "95265295808739876",
+        "liquidity": "136674558010722441420000000000000"
+      },
+      {
+        "sqrtPrice": "102372832643417867",
+        "liquidity": "136674558010722441420000000000000"
+      },
+      {
+        "sqrtPrice": "110010647366044954",
+        "liquidity": "136674558010722441420000000000000"
+      },
+      {
+        "sqrtPrice": "118218302858247834",
+        "liquidity": "102505918508041831070000000000000"
+      },
+      {
+        "sqrtPrice": "127038313702333505",
+        "liquidity": "102505918508041831070000000000000"
+      },
+      {
+        "sqrtPrice": "136516366401266879",
+        "liquidity": "102505918508041831070000000000000"
+      },
+      {
+        "sqrtPrice": "146701556028782674",
+        "liquidity": "102505918508041831070000000000000"
+      },
+      {
+        "sqrtPrice": "157646640535448231",
+        "liquidity": "68337279005361220710000000000000"
+      },
+      {
+        "sqrtPrice": "169408314027949404",
+        "liquidity": "68337279005361220710000000000000"
+      },
+      {
+        "sqrtPrice": "182047500437150495",
+        "liquidity": "68337279005361220710000000000000"
+      },
+      {
+        "sqrtPrice": "195629669096090391",
+        "liquidity": "68337279005361220710000000000000"
+      },
+      {
+        "sqrtPrice": "210225173862567654",
+        "liquidity": "34168639502680610355000000000000"
+      },
+      {
+        "sqrtPrice": "225909617542925223",
+        "liquidity": "34168639502680610355000000000000"
+      },
+      {
+        "sqrtPrice": "242764243504702283",
+        "liquidity": "34168639502680610355000000000000"
+      },
+      {
+        "sqrtPrice": "260876356506655644",
+        "liquidity": "34168639502680610355000000000000"
+      }
+    ],
+    "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+    },
+    "tokenUpdateAuthority": 1
+  }
+}

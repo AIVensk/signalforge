@@ -1,0 +1,32 @@
+{
+  "name": "signalforge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reproducible launch-readiness workbench using Panta market evidence and official Meteora DBC mathematics.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.14"
+  },
+  "bin": {
+    "signalforge": "dist/cli.js"
+  },
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && tsc -p tsconfig.test.json && node --test --experimental-test-isolation=none dist-test/test/*.test.js",
+    "demo": "npm run build && node dist/cli.js demo --out artifacts/demo",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@meteora-ag/dynamic-bonding-curve-sdk": "1.5.13",
+    "@solana/web3.js": "1.98.4",
+    "bn.js": "5.2.2",
+    "decimal.js": "10.6.0",
+    "zod": "4.1.11"
+  },
+  "devDependencies": {
+    "@types/bn.js": "5.2.0",
+    "@types/node": "22.18.6",
+    "typescript": "5.9.2"
+  }
+}

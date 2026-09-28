@@ -1,0 +1,1412 @@
+{
+  "schemaVersion": 1,
+  "product": "SignalForge",
+  "generatedAt": "2026-09-28T16:00:00.000Z",
+  "runId": "f691e804aa6930e0",
+  "inputHash": "02af2aa1cf71d16f1868d738e4c9907209472cfa83c115035c8a674980425917",
+  "snapshotHash": "b3ac778d361b113ea4ae9b651ea5d51a3e8d410978cd88b929ae233ffbf15900",
+  "engine": {
+    "sdk": "@meteora-ag/dynamic-bonding-curve-sdk",
+    "version": "1.5.13"
+  },
+  "input": {
+    "schemaVersion": 1,
+    "name": "Community energy launch rehearsal",
+    "anchorMarketId": "SyntheticClimateReadiness111",
+    "purpose": "Rehearse conditional launch budgets for a community energy coordination token; the event link and both budgets are hypothetical operator assumptions, not demand forecasts.",
+    "tokenSupply": 1000000000,
+    "initialMarketCap": 20000,
+    "migrationMarketCap": 200000,
+    "tradingFeeBps": 100,
+    "quoteDecimals": 6,
+    "baseDecimals": 6,
+    "quoteUnit": "USDC",
+    "budgets": {
+      "yes": "40000",
+      "no": "8000"
+    },
+    "probeAmounts": [
+      "100",
+      "250",
+      "500",
+      "1000",
+      "2500",
+      "5000",
+      "8000",
+      "10000",
+      "15000",
+      "20000",
+      "30000",
+      "40000",
+      "60000",
+      "100000"
+    ],
+    "guardrails": {
+      "maxPriceImpactPercent": 160,
+      "minVolumeUsdc": "10000",
+      "minRecentTrades": 5,
+      "maxSnapshotAgeMinutes": 30,
+      "maxTradeAgeMinutes": 60,
+      "maxComplementGap": 0.05
+    }
+  },
+  "provenance": {
+    "mode": "synthetic-fixture",
+    "source": "Independent fixtures matching Panta API v1 documentation; not downloaded market data",
+    "capturedAt": "2026-09-28T16:00:00Z",
+    "complete": true,
+    "pages": 1,
+    "notes": [
+      "All titles, market IDs, prices, volumes, wallets and signatures are invented test data.",
+      "This fixture is intentionally mixed quality: one qualified anchor, a stale/thin example, and a null-price catalog example."
+    ]
+  },
+  "evidence": [
+    {
+      "marketId": "SyntheticClimateReadiness111",
+      "title": "Will the illustrative community energy pilot meet its October milestone?",
+      "phase": "secondary",
+      "volumeUsdc": "185420.50",
+      "yesPrice": "0.64",
+      "noPrice": "0.37",
+      "yesWeight": 0.6336633663366337,
+      "noWeight": 0.36633663366336633,
+      "complementGap": 0.01,
+      "tradeCount": 12,
+      "recentTradeCount": 12,
+      "uniqueWallets": 4,
+      "lastTradeAt": "2026-09-28T15:59:00.000Z",
+      "snapshotAgeMinutes": 0,
+      "usable": true,
+      "issues": []
+    },
+    {
+      "marketId": "SyntheticGridCapacity222",
+      "title": "Will the illustrative grid expansion clear its next readiness review?",
+      "phase": "secondary",
+      "volumeUsdc": "860",
+      "yesPrice": "0.78",
+      "noPrice": "0.30",
+      "yesWeight": null,
+      "noWeight": null,
+      "complementGap": 0.08,
+      "tradeCount": 2,
+      "recentTradeCount": 0,
+      "uniqueWallets": 2,
+      "lastTradeAt": "2026-09-28T14:00:00.000Z",
+      "snapshotAgeMinutes": 0,
+      "usable": false,
+      "issues": [
+        "Reported market volume is below the configured floor.",
+        "Too few recent trades for the configured evidence floor.",
+        "YES/NO complement gap exceeds the configured tolerance."
+      ]
+    },
+    {
+      "marketId": "SyntheticUnpricedMarket333",
+      "title": "Will the illustrative storage pilot publish validated test results?",
+      "phase": "secondary",
+      "volumeUsdc": "74000",
+      "yesPrice": null,
+      "noPrice": null,
+      "yesWeight": null,
+      "noWeight": null,
+      "complementGap": null,
+      "tradeCount": 0,
+      "recentTradeCount": 0,
+      "uniqueWallets": 0,
+      "lastTradeAt": null,
+      "snapshotAgeMinutes": 0,
+      "usable": false,
+      "issues": [
+        "DETAIL_READ_FAILED",
+        "Live detail was unavailable; catalog prices are not evidence.",
+        "Recent trade sample was unavailable.",
+        "Too few recent trades for the configured evidence floor.",
+        "A price is missing; null is never treated as zero."
+      ]
+    }
+  ],
+  "curves": [
+    {
+      "id": "constant-liquidity",
+      "label": "Constant liquidity",
+      "sdkVersion": "1.5.13",
+      "initialPrice": "0.000020000001",
+      "migrationPrice": "0.000200000000",
+      "migrationQuoteThresholdUsdc": "48050.566619",
+      "config": {
+        "poolFees": {
+          "baseFee": {
+            "cliffFeeNumerator": "10000000",
+            "firstFactor": 0,
+            "secondFactor": "0",
+            "thirdFactor": "0",
+            "baseFeeMode": 0
+          },
+          "dynamicFee": null
+        },
+        "collectFeeMode": 0,
+        "migrationOption": 1,
+        "activationType": 1,
+        "tokenType": 0,
+        "tokenDecimal": 6,
+        "partnerLiquidityPercentage": 0,
+        "partnerPermanentLockedLiquidityPercentage": 100,
+        "creatorLiquidityPercentage": 0,
+        "creatorPermanentLockedLiquidityPercentage": 0,
+        "migrationQuoteThreshold": "48050566619",
+        "sqrtStartPrice": "82496349210278948",
+        "lockedVesting": {
+          "amountPerPeriod": "0",
+          "cliffDurationFromMigrationTime": "0",
+          "frequency": "0",
+          "numberOfPeriod": "0",
+          "cliffUnlockAmount": "0"
+        },
+        "migrationFeeOption": 2,
+        "tokenSupply": {
+          "preMigrationTokenSupply": "1000000000000000",
+          "postMigrationTokenSupply": "1000000000000000"
+        },
+        "creatorTradingFeePercentage": 0,
+        "tokenUpdateAuthority": 1,
+        "migrationFee": {
+          "feePercentage": 0,
+          "creatorFeePercentage": 0
+        },
+        "migratedPoolFee": {
+          "collectFeeMode": 0,
+          "dynamicFee": 0,
+          "poolFeeBps": 0
+        },
+        "poolCreationFee": "0",
+        "partnerLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "creatorLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "migratedPoolBaseFeeMode": 0,
+        "migratedPoolMarketCapFeeSchedulerParams": {
+          "numberOfPeriod": 0,
+          "sqrtPriceStepBps": 0,
+          "schedulerExpirationDuration": 0,
+          "reductionFactor": "0"
+        },
+        "enableFirstSwapWithMinFee": false,
+        "compoundingFeeBps": 0,
+        "padding": [],
+        "curve": [
+          {
+            "sqrtPrice": "260876356506655627",
+            "liquidity": "91662517503090595900139279577104"
+          },
+          {
+            "sqrtPrice": "79226673521066979257578248091",
+            "liquidity": "3262493626847327293895994"
+          }
+        ]
+      },
+      "segments": [
+        {
+          "tokenAmount": "48050.566619",
+          "endPrice": "0.000200000000"
+        },
+        {
+          "tokenAmount": "0",
+          "endPrice": "18446050713735950760.000000000000"
+        }
+      ],
+      "probes": [
+        {
+          "requestedUsdc": "100",
+          "usedUsdc": "100",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "99",
+          "tokenOutput": "4928045.32255",
+          "totalFeeUsdc": "1",
+          "protocolFeeUsdc": "0.2",
+          "averagePrice": "0.000020292021",
+          "terminalPrice": "0.000020178598",
+          "grossPriceImpactPercent": 1.460101445877571,
+          "migrationProgressPercent": 0.2060329502146885,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "250",
+          "usedUsdc": "250",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "247.5",
+          "tokenOutput": "12238690.912274",
+          "totalFeeUsdc": "2.5",
+          "protocolFeeUsdc": "0.5",
+          "averagePrice": "0.000020427021",
+          "terminalPrice": "0.000020447982",
+          "grossPriceImpactPercent": 2.1351020995151857,
+          "migrationProgressPercent": 0.5150823755367212,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "500",
+          "usedUsdc": "500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "495",
+          "tokenOutput": "24210704.95354",
+          "totalFeeUsdc": "5",
+          "protocolFeeUsdc": "1",
+          "averagePrice": "0.000020652022",
+          "terminalPrice": "0.000020900925",
+          "grossPriceImpactPercent": 3.2601031889195986,
+          "migrationProgressPercent": 1.0301647510734424,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "1000",
+          "usedUsdc": "1000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "990",
+          "tokenOutput": "47388823.716282",
+          "totalFeeUsdc": "10",
+          "protocolFeeUsdc": "2",
+          "averagePrice": "0.000021102022",
+          "terminalPrice": "0.000021821697",
+          "grossPriceImpactPercent": 5.510105367737562,
+          "migrationProgressPercent": 2.060329502146885,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "2500",
+          "usedUsdc": "2500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "2475",
+          "tokenOutput": "111348539.092527",
+          "totalFeeUsdc": "25",
+          "protocolFeeUsdc": "5",
+          "averagePrice": "0.000022452023",
+          "terminalPrice": "0.000024703094",
+          "grossPriceImpactPercent": 12.260111904189825,
+          "migrationProgressPercent": 5.150823755367212,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "5000",
+          "usedUsdc": "5000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "4950",
+          "tokenOutput": "202412550.09212",
+          "totalFeeUsdc": "50",
+          "protocolFeeUsdc": "10",
+          "averagePrice": "0.000024702026",
+          "terminalPrice": "0.000029902363",
+          "grossPriceImpactPercent": 23.510122798277678,
+          "migrationProgressPercent": 10.301647510734425,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "291949190.577202",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000027402028",
+          "terminalPrice": "0.000036796440",
+          "grossPriceImpactPercent": 37.01013587118331,
+          "migrationProgressPercent": 16.48263601717508,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "10000",
+          "usedUsdc": "10000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "9900",
+          "tokenOutput": "342441944.545676",
+          "totalFeeUsdc": "100",
+          "protocolFeeUsdc": "20",
+          "averagePrice": "0.000029202030",
+          "terminalPrice": "0.000041789432",
+          "grossPriceImpactPercent": 46.0101445864538,
+          "migrationProgressPercent": 20.60329502146885,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "15000",
+          "usedUsdc": "15000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "14850",
+          "tokenOutput": "445076984.77154",
+          "totalFeeUsdc": "150",
+          "protocolFeeUsdc": "30",
+          "averagePrice": "0.000033702035",
+          "terminalPrice": "0.000055661207",
+          "grossPriceImpactPercent": 68.51016637462989,
+          "migrationProgressPercent": 30.904942532203275,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "20000",
+          "usedUsdc": "20000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "19800",
+          "tokenOutput": "523532260.938494",
+          "totalFeeUsdc": "200",
+          "protocolFeeUsdc": "40",
+          "averagePrice": "0.000038202039",
+          "terminalPrice": "0.000071517688",
+          "grossPriceImpactPercent": 91.0101881628062,
+          "migrationProgressPercent": 41.2065900429377,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "30000",
+          "usedUsdc": "30000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "29700",
+          "tokenOutput": "635565637.986931",
+          "totalFeeUsdc": "300",
+          "protocolFeeUsdc": "60",
+          "averagePrice": "0.000047202048",
+          "terminalPrice": "0.000109184771",
+          "grossPriceImpactPercent": 136.0102317391584,
+          "migrationProgressPercent": 61.80988506440655,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "40000",
+          "usedUsdc": "40000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "39600",
+          "tokenOutput": "711717716.079127",
+          "totalFeeUsdc": "400",
+          "protocolFeeUsdc": "80",
+          "averagePrice": "0.000056202057",
+          "terminalPrice": "0.000154790679",
+          "grossPriceImpactPercent": 181.01027531551102,
+          "migrationProgressPercent": 82.4131800858754,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "60000",
+          "usedUsdc": "48535.925878",
+          "unspentUsdc": "11464.074122",
+          "curveInflowUsdc": "48050.566619",
+          "tokenOutput": "759746150.444386",
+          "totalFeeUsdc": "485.359259",
+          "protocolFeeUsdc": "97.071851",
+          "averagePrice": "0.000063884399",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 219.42197896342498,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        },
+        {
+          "requestedUsdc": "100000",
+          "usedUsdc": "48535.925878",
+          "unspentUsdc": "51464.074122",
+          "curveInflowUsdc": "48050.566619",
+          "tokenOutput": "759746150.444386",
+          "totalFeeUsdc": "485.359259",
+          "protocolFeeUsdc": "97.071851",
+          "averagePrice": "0.000063884399",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 219.42197896342498,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        }
+      ],
+      "outcomes": {
+        "yes": {
+          "requestedUsdc": "40000",
+          "usedUsdc": "40000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "39600",
+          "tokenOutput": "711717716.079127",
+          "totalFeeUsdc": "400",
+          "protocolFeeUsdc": "80",
+          "averagePrice": "0.000056202057",
+          "terminalPrice": "0.000154790679",
+          "grossPriceImpactPercent": 181.01027531551102,
+          "migrationProgressPercent": 82.4131800858754,
+          "reachesMigration": false
+        },
+        "no": {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "291949190.577202",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000027402028",
+          "terminalPrice": "0.000036796440",
+          "grossPriceImpactPercent": 37.01013587118331,
+          "migrationProgressPercent": 16.48263601717508,
+          "reachesMigration": false
+        }
+      }
+    },
+    {
+      "id": "front-weighted",
+      "label": "Front-weighted liquidity",
+      "sdkVersion": "1.5.13",
+      "initialPrice": "0.000020000000",
+      "migrationPrice": "0.000200000000",
+      "migrationQuoteThresholdUsdc": "38481.408396",
+      "config": {
+        "poolFees": {
+          "baseFee": {
+            "cliffFeeNumerator": "10000000",
+            "firstFactor": 0,
+            "secondFactor": "0",
+            "thirdFactor": "0",
+            "baseFeeMode": 0
+          },
+          "dynamicFee": null
+        },
+        "activationType": 1,
+        "collectFeeMode": 0,
+        "migrationOption": 1,
+        "tokenType": 0,
+        "tokenDecimal": 6,
+        "migrationQuoteThreshold": "38481408396",
+        "partnerLiquidityPercentage": 0,
+        "partnerPermanentLockedLiquidityPercentage": 100,
+        "creatorLiquidityPercentage": 0,
+        "creatorPermanentLockedLiquidityPercentage": 0,
+        "sqrtStartPrice": "82496347424711897",
+        "lockedVesting": {
+          "amountPerPeriod": "0",
+          "cliffDurationFromMigrationTime": "0",
+          "frequency": "0",
+          "numberOfPeriod": "0",
+          "cliffUnlockAmount": "0"
+        },
+        "migrationFeeOption": 2,
+        "tokenSupply": {
+          "preMigrationTokenSupply": "1000000000000000",
+          "postMigrationTokenSupply": "1000000000000000"
+        },
+        "creatorTradingFeePercentage": 0,
+        "migratedPoolFee": {
+          "collectFeeMode": 0,
+          "dynamicFee": 0,
+          "poolFeeBps": 0
+        },
+        "poolCreationFee": "0",
+        "partnerLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "creatorLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "migratedPoolBaseFeeMode": 0,
+        "migratedPoolMarketCapFeeSchedulerParams": {
+          "numberOfPeriod": 0,
+          "sqrtPriceStepBps": 0,
+          "schedulerExpirationDuration": 0,
+          "reductionFactor": "0"
+        },
+        "enableFirstSwapWithMinFee": false,
+        "compoundingFeeBps": 0,
+        "padding": [],
+        "curve": [
+          {
+            "sqrtPrice": "88651220750510565",
+            "liquidity": "136674558010722441420000000000000"
+          },
+          {
+            "sqrtPrice": "95265295808739876",
+            "liquidity": "136674558010722441420000000000000"
+          },
+          {
+            "sqrtPrice": "102372832643417867",
+            "liquidity": "136674558010722441420000000000000"
+          },
+          {
+            "sqrtPrice": "110010647366044954",
+            "liquidity": "136674558010722441420000000000000"
+          },
+          {
+            "sqrtPrice": "118218302858247834",
+            "liquidity": "102505918508041831070000000000000"
+          },
+          {
+            "sqrtPrice": "127038313702333505",
+            "liquidity": "102505918508041831070000000000000"
+          },
+          {
+            "sqrtPrice": "136516366401266879",
+            "liquidity": "102505918508041831070000000000000"
+          },
+          {
+            "sqrtPrice": "146701556028782674",
+            "liquidity": "102505918508041831070000000000000"
+          },
+          {
+            "sqrtPrice": "157646640535448231",
+            "liquidity": "68337279005361220710000000000000"
+          },
+          {
+            "sqrtPrice": "169408314027949404",
+            "liquidity": "68337279005361220710000000000000"
+          },
+          {
+            "sqrtPrice": "182047500437150495",
+            "liquidity": "68337279005361220710000000000000"
+          },
+          {
+            "sqrtPrice": "195629669096090391",
+            "liquidity": "68337279005361220710000000000000"
+          },
+          {
+            "sqrtPrice": "210225173862567654",
+            "liquidity": "34168639502680610355000000000000"
+          },
+          {
+            "sqrtPrice": "225909617542925223",
+            "liquidity": "34168639502680610355000000000000"
+          },
+          {
+            "sqrtPrice": "242764243504702283",
+            "liquidity": "34168639502680610355000000000000"
+          },
+          {
+            "sqrtPrice": "260876356506655644",
+            "liquidity": "34168639502680610355000000000000"
+          }
+        ],
+        "migrationFee": {
+          "feePercentage": 0,
+          "creatorFeePercentage": 0
+        },
+        "tokenUpdateAuthority": 1
+      },
+      "segments": [
+        {
+          "tokenAmount": "2472.107501",
+          "endPrice": "0.000023095640"
+        },
+        {
+          "tokenAmount": "2656.546073",
+          "endPrice": "0.000026670429"
+        },
+        {
+          "tokenAmount": "2854.745206",
+          "endPrice": "0.000030798531"
+        },
+        {
+          "tokenAmount": "3067.731546",
+          "endPrice": "0.000035565588"
+        },
+        {
+          "tokenAmount": "2472.456251",
+          "endPrice": "0.000041070501"
+        },
+        {
+          "tokenAmount": "2656.920842",
+          "endPrice": "0.000047427474"
+        },
+        {
+          "tokenAmount": "2855.147937",
+          "endPrice": "0.000054768393"
+        },
+        {
+          "tokenAmount": "3068.164324",
+          "endPrice": "0.000063245553"
+        },
+        {
+          "tokenAmount": "2198.048934",
+          "endPrice": "0.000073034825"
+        },
+        {
+          "tokenAmount": "2362.040591",
+          "endPrice": "0.000084339301"
+        },
+        {
+          "tokenAmount": "2538.26731",
+          "endPrice": "0.000097393505"
+        },
+        {
+          "tokenAmount": "2727.641922",
+          "endPrice": "0.000112468265"
+        },
+        {
+          "tokenAmount": "1465.572681",
+          "endPrice": "0.000129876326"
+        },
+        {
+          "tokenAmount": "1574.915876",
+          "endPrice": "0.000149978842"
+        },
+        {
+          "tokenAmount": "1692.41693",
+          "endPrice": "0.000173192865"
+        },
+        {
+          "tokenAmount": "1818.684481",
+          "endPrice": "0.000200000000"
+        }
+      ],
+      "probes": [
+        {
+          "requestedUsdc": "100",
+          "usedUsdc": "100",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "99",
+          "tokenOutput": "4935254.42245",
+          "totalFeeUsdc": "1",
+          "protocolFeeUsdc": "0.2",
+          "averagePrice": "0.000020262380",
+          "terminalPrice": "0.000020119691",
+          "grossPriceImpactPercent": 1.3118994890208413,
+          "migrationProgressPercent": 0.25726709111377194,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "250",
+          "usedUsdc": "250",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "247.5",
+          "tokenOutput": "12283250.111558",
+          "totalFeeUsdc": "2.5",
+          "protocolFeeUsdc": "0.5",
+          "averagePrice": "0.000020352919",
+          "terminalPrice": "0.000020299896",
+          "grossPriceImpactPercent": 1.764597207363285,
+          "migrationProgressPercent": 0.6431677277844298,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "500",
+          "usedUsdc": "500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "495",
+          "tokenOutput": "24385701.404256",
+          "totalFeeUsdc": "5",
+          "protocolFeeUsdc": "1",
+          "averagePrice": "0.000020503819",
+          "terminalPrice": "0.000020602024",
+          "grossPriceImpactPercent": 2.519093404616147,
+          "migrationProgressPercent": 1.2863354555688595,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "1000",
+          "usedUsdc": "1000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "990",
+          "tokenOutput": "48063943.13219",
+          "totalFeeUsdc": "10",
+          "protocolFeeUsdc": "2",
+          "averagePrice": "0.000020805617",
+          "terminalPrice": "0.000021212976",
+          "grossPriceImpactPercent": 4.028085799130698,
+          "migrationProgressPercent": 2.572670911137719,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "2500",
+          "usedUsdc": "2500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "2475",
+          "tokenOutput": "115148935.962063",
+          "totalFeeUsdc": "25",
+          "protocolFeeUsdc": "5",
+          "averagePrice": "0.000021711013",
+          "terminalPrice": "0.000023099392",
+          "grossPriceImpactPercent": 8.555063019585813,
+          "migrationProgressPercent": 6.431677277844298,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "5000",
+          "usedUsdc": "5000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "4950",
+          "tokenOutput": "215331564.361533",
+          "totalFeeUsdc": "50",
+          "protocolFeeUsdc": "10",
+          "averagePrice": "0.000023220005",
+          "terminalPrice": "0.000026421959",
+          "grossPriceImpactPercent": 16.100024973700602,
+          "migrationProgressPercent": 12.863354555688597,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "319606297.850432",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000025030796",
+          "terminalPrice": "0.000030703629",
+          "grossPriceImpactPercent": 25.15397934592337,
+          "migrationProgressPercent": 20.581367289101753,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "10000",
+          "usedUsdc": "10000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "9900",
+          "tokenOutput": "381126758.637208",
+          "totalFeeUsdc": "100",
+          "protocolFeeUsdc": "20",
+          "averagePrice": "0.000026237990",
+          "terminalPrice": "0.000033736615",
+          "grossPriceImpactPercent": 31.189948926138413,
+          "migrationProgressPercent": 25.726709111377193,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "15000",
+          "usedUsdc": "15000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "14850",
+          "tokenOutput": "510186937.22211",
+          "totalFeeUsdc": "150",
+          "protocolFeeUsdc": "30",
+          "averagePrice": "0.000029400988",
+          "terminalPrice": "0.000044186937",
+          "grossPriceImpactPercent": 47.004939813558444,
+          "migrationProgressPercent": 38.59006366706579,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "20000",
+          "usedUsdc": "20000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "19800",
+          "tokenOutput": "608972933.6265",
+          "totalFeeUsdc": "200",
+          "protocolFeeUsdc": "40",
+          "averagePrice": "0.000032842182",
+          "terminalPrice": "0.000056823206",
+          "grossPriceImpactPercent": 64.21091066312115,
+          "migrationProgressPercent": 51.45341822275439,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "30000",
+          "usedUsdc": "30000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "29700",
+          "tokenOutput": "742889351.183941",
+          "totalFeeUsdc": "300",
+          "protocolFeeUsdc": "60",
+          "averagePrice": "0.000040382864",
+          "terminalPrice": "0.000100063923",
+          "grossPriceImpactPercent": 101.91432245050405,
+          "migrationProgressPercent": 77.18012733413158,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "40000",
+          "usedUsdc": "38870.109491",
+          "unspentUsdc": "1129.890509",
+          "curveInflowUsdc": "38481.408396",
+          "tokenOutput": "807591957.974064",
+          "totalFeeUsdc": "388.701095",
+          "protocolFeeUsdc": "77.740219",
+          "averagePrice": "0.000048130877",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 140.65438682989165,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        },
+        {
+          "requestedUsdc": "60000",
+          "usedUsdc": "38870.109491",
+          "unspentUsdc": "21129.890509",
+          "curveInflowUsdc": "38481.408396",
+          "tokenOutput": "807591957.974064",
+          "totalFeeUsdc": "388.701095",
+          "protocolFeeUsdc": "77.740219",
+          "averagePrice": "0.000048130877",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 140.65438682989165,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        },
+        {
+          "requestedUsdc": "100000",
+          "usedUsdc": "38870.109491",
+          "unspentUsdc": "61129.890509",
+          "curveInflowUsdc": "38481.408396",
+          "tokenOutput": "807591957.974064",
+          "totalFeeUsdc": "388.701095",
+          "protocolFeeUsdc": "77.740219",
+          "averagePrice": "0.000048130877",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 140.65438682989165,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        }
+      ],
+      "outcomes": {
+        "yes": {
+          "requestedUsdc": "40000",
+          "usedUsdc": "38870.109491",
+          "unspentUsdc": "1129.890509",
+          "curveInflowUsdc": "38481.408396",
+          "tokenOutput": "807591957.974064",
+          "totalFeeUsdc": "388.701095",
+          "protocolFeeUsdc": "77.740219",
+          "averagePrice": "0.000048130877",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 140.65438682989165,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        },
+        "no": {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "319606297.850432",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000025030796",
+          "terminalPrice": "0.000030703629",
+          "grossPriceImpactPercent": 25.15397934592337,
+          "migrationProgressPercent": 20.581367289101753,
+          "reachesMigration": false
+        }
+      }
+    },
+    {
+      "id": "back-weighted",
+      "label": "Back-weighted liquidity",
+      "sdkVersion": "1.5.13",
+      "initialPrice": "0.000020000000",
+      "migrationPrice": "0.000200000000",
+      "migrationQuoteThresholdUsdc": "59128.181943",
+      "config": {
+        "poolFees": {
+          "baseFee": {
+            "cliffFeeNumerator": "10000000",
+            "firstFactor": 0,
+            "secondFactor": "0",
+            "thirdFactor": "0",
+            "baseFeeMode": 0
+          },
+          "dynamicFee": null
+        },
+        "activationType": 1,
+        "collectFeeMode": 0,
+        "migrationOption": 1,
+        "tokenType": 0,
+        "tokenDecimal": 6,
+        "migrationQuoteThreshold": "59128181943",
+        "partnerLiquidityPercentage": 0,
+        "partnerPermanentLockedLiquidityPercentage": 100,
+        "creatorLiquidityPercentage": 0,
+        "creatorPermanentLockedLiquidityPercentage": 0,
+        "sqrtStartPrice": "82496347424711897",
+        "lockedVesting": {
+          "amountPerPeriod": "0",
+          "cliffDurationFromMigrationTime": "0",
+          "frequency": "0",
+          "numberOfPeriod": "0",
+          "cliffUnlockAmount": "0"
+        },
+        "migrationFeeOption": 2,
+        "tokenSupply": {
+          "preMigrationTokenSupply": "1000000000000000",
+          "postMigrationTokenSupply": "1000000000000000"
+        },
+        "creatorTradingFeePercentage": 0,
+        "migratedPoolFee": {
+          "collectFeeMode": 0,
+          "dynamicFee": 0,
+          "poolFeeBps": 0
+        },
+        "poolCreationFee": "0",
+        "partnerLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "creatorLiquidityVestingInfo": {
+          "vestingPercentage": 0,
+          "bpsPerPeriod": 0,
+          "numberOfPeriods": 0,
+          "cliffDurationFromMigrationTime": 0,
+          "frequency": 0
+        },
+        "migratedPoolBaseFeeMode": 0,
+        "migratedPoolMarketCapFeeSchedulerParams": {
+          "numberOfPeriod": 0,
+          "sqrtPriceStepBps": 0,
+          "schedulerExpirationDuration": 0,
+          "reductionFactor": "0"
+        },
+        "enableFirstSwapWithMinFee": false,
+        "compoundingFeeBps": 0,
+        "padding": [],
+        "curve": [
+          {
+            "sqrtPrice": "88651220750510565",
+            "liquidity": "39554894559268642334000000000000"
+          },
+          {
+            "sqrtPrice": "95265295808739876",
+            "liquidity": "39554894559268642334000000000000"
+          },
+          {
+            "sqrtPrice": "102372832643417867",
+            "liquidity": "39554894559268642334000000000000"
+          },
+          {
+            "sqrtPrice": "110010647366044954",
+            "liquidity": "39554894559268642334000000000000"
+          },
+          {
+            "sqrtPrice": "118218302858247834",
+            "liquidity": "79109789118537284668000000000000"
+          },
+          {
+            "sqrtPrice": "127038313702333505",
+            "liquidity": "79109789118537284668000000000000"
+          },
+          {
+            "sqrtPrice": "136516366401266879",
+            "liquidity": "79109789118537284668000000000000"
+          },
+          {
+            "sqrtPrice": "146701556028782674",
+            "liquidity": "79109789118537284668000000000000"
+          },
+          {
+            "sqrtPrice": "157646640535448231",
+            "liquidity": "118664683677805927000000000000000"
+          },
+          {
+            "sqrtPrice": "169408314027949404",
+            "liquidity": "118664683677805927000000000000000"
+          },
+          {
+            "sqrtPrice": "182047500437150495",
+            "liquidity": "118664683677805927000000000000000"
+          },
+          {
+            "sqrtPrice": "195629669096090391",
+            "liquidity": "118664683677805927000000000000000"
+          },
+          {
+            "sqrtPrice": "210225173862567654",
+            "liquidity": "158219578237074569340000000000000"
+          },
+          {
+            "sqrtPrice": "225909617542925223",
+            "liquidity": "158219578237074569340000000000000"
+          },
+          {
+            "sqrtPrice": "242764243504702283",
+            "liquidity": "158219578237074569340000000000000"
+          },
+          {
+            "sqrtPrice": "260876356506655644",
+            "liquidity": "158219578237074569340000000000000"
+          }
+        ],
+        "migrationFee": {
+          "feePercentage": 0,
+          "creatorFeePercentage": 0
+        },
+        "tokenUpdateAuthority": 1
+      },
+      "segments": [
+        {
+          "tokenAmount": "715.451017",
+          "endPrice": "0.000023095640"
+        },
+        {
+          "tokenAmount": "768.829264",
+          "endPrice": "0.000026670429"
+        },
+        {
+          "tokenAmount": "826.189946",
+          "endPrice": "0.000030798531"
+        },
+        {
+          "tokenAmount": "887.830183",
+          "endPrice": "0.000035565588"
+        },
+        {
+          "tokenAmount": "1908.13853",
+          "endPrice": "0.000041070501"
+        },
+        {
+          "tokenAmount": "2050.500602",
+          "endPrice": "0.000047427474"
+        },
+        {
+          "tokenAmount": "2203.483998",
+          "endPrice": "0.000054768393"
+        },
+        {
+          "tokenAmount": "2367.881154",
+          "endPrice": "0.000063245553"
+        },
+        {
+          "tokenAmount": "3816.815437",
+          "endPrice": "0.000073034825"
+        },
+        {
+          "tokenAmount": "4101.579748",
+          "endPrice": "0.000084339301"
+        },
+        {
+          "tokenAmount": "4407.589705",
+          "endPrice": "0.000097393505"
+        },
+        {
+          "tokenAmount": "4736.430401",
+          "endPrice": "0.000112468265"
+        },
+        {
+          "tokenAmount": "6786.406917",
+          "endPrice": "0.000129876326"
+        },
+        {
+          "tokenAmount": "7292.725999",
+          "endPrice": "0.000149978842"
+        },
+        {
+          "tokenAmount": "7836.820448",
+          "endPrice": "0.000173192865"
+        },
+        {
+          "tokenAmount": "8421.508603",
+          "endPrice": "0.000200000000"
+        }
+      ],
+      "probes": [
+        {
+          "requestedUsdc": "100",
+          "usedUsdc": "100",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "99",
+          "tokenOutput": "4899419.362089",
+          "totalFeeUsdc": "1",
+          "protocolFeeUsdc": "0.2",
+          "averagePrice": "0.000020410582",
+          "terminalPrice": "0.000020415084",
+          "grossPriceImpactPercent": 2.0529093445088304,
+          "migrationProgressPercent": 0.16743284969498423,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "250",
+          "usedUsdc": "250",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "247.5",
+          "tokenOutput": "12063643.321968",
+          "totalFeeUsdc": "2.5",
+          "protocolFeeUsdc": "0.5",
+          "averagePrice": "0.000020723424",
+          "terminalPrice": "0.000021045703",
+          "grossPriceImpactPercent": 3.617121846079374,
+          "migrationProgressPercent": 0.4185821242374606,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "500",
+          "usedUsdc": "500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "495",
+          "tokenOutput": "23535139.346644",
+          "totalFeeUsdc": "5",
+          "protocolFeeUsdc": "1",
+          "averagePrice": "0.000021244829",
+          "terminalPrice": "0.000022118051",
+          "grossPriceImpactPercent": 6.224142682056745,
+          "migrationProgressPercent": 0.8371642484749212,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "1000",
+          "usedUsdc": "1000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "990",
+          "tokenOutput": "44867924.11658",
+          "totalFeeUsdc": "10",
+          "protocolFeeUsdc": "2",
+          "averagePrice": "0.000022287637",
+          "terminalPrice": "0.000024342683",
+          "grossPriceImpactPercent": 11.438184369941798,
+          "migrationProgressPercent": 1.6743284969498424,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "2500",
+          "usedUsdc": "2500",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "2475",
+          "tokenOutput": "98362996.249967",
+          "totalFeeUsdc": "25",
+          "protocolFeeUsdc": "5",
+          "averagePrice": "0.000025416062",
+          "terminalPrice": "0.000031656064",
+          "grossPriceImpactPercent": 27.080309430937994,
+          "migrationProgressPercent": 4.1858212423746055,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "5000",
+          "usedUsdc": "5000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "4950",
+          "tokenOutput": "166014868.428584",
+          "totalFeeUsdc": "50",
+          "protocolFeeUsdc": "10",
+          "averagePrice": "0.000030117784",
+          "terminalPrice": "0.000040604280",
+          "grossPriceImpactPercent": 50.58892156249522,
+          "migrationProgressPercent": 8.371642484749211,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "231989565.332101",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000034484310",
+          "terminalPrice": "0.000049909852",
+          "grossPriceImpactPercent": 72.42154811031536,
+          "migrationProgressPercent": 13.39462797559874,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "10000",
+          "usedUsdc": "10000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "9900",
+          "tokenOutput": "269227503.152754",
+          "totalFeeUsdc": "100",
+          "protocolFeeUsdc": "20",
+          "averagePrice": "0.000037143308",
+          "terminalPrice": "0.000056646471",
+          "grossPriceImpactPercent": 85.71653866890061,
+          "migrationProgressPercent": 16.743284969498422,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "15000",
+          "usedUsdc": "15000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "14850",
+          "tokenOutput": "346292691.543728",
+          "totalFeeUsdc": "150",
+          "protocolFeeUsdc": "30",
+          "averagePrice": "0.000043315959",
+          "terminalPrice": "0.000071199561",
+          "grossPriceImpactPercent": 116.57979458261076,
+          "migrationProgressPercent": 25.114927454247635,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "20000",
+          "usedUsdc": "20000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "19800",
+          "tokenOutput": "410005395.890436",
+          "totalFeeUsdc": "200",
+          "protocolFeeUsdc": "40",
+          "averagePrice": "0.000048779846",
+          "terminalPrice": "0.000084777578",
+          "grossPriceImpactPercent": 143.89922913776132,
+          "migrationProgressPercent": 33.486569938996844,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "30000",
+          "usedUsdc": "30000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "29700",
+          "tokenOutput": "510084562.870858",
+          "totalFeeUsdc": "300",
+          "protocolFeeUsdc": "60",
+          "averagePrice": "0.000058813778",
+          "terminalPrice": "0.000114728052",
+          "grossPriceImpactPercent": 194.0688876286904,
+          "migrationProgressPercent": 50.22985490849527,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "40000",
+          "usedUsdc": "40000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "39600",
+          "tokenOutput": "587981372.935544",
+          "totalFeeUsdc": "400",
+          "protocolFeeUsdc": "80",
+          "averagePrice": "0.000068029366",
+          "terminalPrice": "0.000140786634",
+          "grossPriceImpactPercent": 240.1468298247001,
+          "migrationProgressPercent": 66.97313987799369,
+          "reachesMigration": false
+        },
+        {
+          "requestedUsdc": "60000",
+          "usedUsdc": "59725.436307",
+          "unspentUsdc": "274.563693",
+          "curveInflowUsdc": "59128.181943",
+          "tokenOutput": "704358090.242055",
+          "totalFeeUsdc": "597.254364",
+          "protocolFeeUsdc": "119.450872",
+          "averagePrice": "0.000084794137",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 323.9706843324193,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        },
+        {
+          "requestedUsdc": "100000",
+          "usedUsdc": "59725.436307",
+          "unspentUsdc": "40274.563693",
+          "curveInflowUsdc": "59128.181943",
+          "tokenOutput": "704358090.242055",
+          "totalFeeUsdc": "597.254364",
+          "protocolFeeUsdc": "119.450872",
+          "averagePrice": "0.000084794137",
+          "terminalPrice": "0.000200000000",
+          "grossPriceImpactPercent": 323.9706843324193,
+          "migrationProgressPercent": 100,
+          "reachesMigration": true
+        }
+      ],
+      "outcomes": {
+        "yes": {
+          "requestedUsdc": "40000",
+          "usedUsdc": "40000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "39600",
+          "tokenOutput": "587981372.935544",
+          "totalFeeUsdc": "400",
+          "protocolFeeUsdc": "80",
+          "averagePrice": "0.000068029366",
+          "terminalPrice": "0.000140786634",
+          "grossPriceImpactPercent": 240.1468298247001,
+          "migrationProgressPercent": 66.97313987799369,
+          "reachesMigration": false
+        },
+        "no": {
+          "requestedUsdc": "8000",
+          "usedUsdc": "8000",
+          "unspentUsdc": "0",
+          "curveInflowUsdc": "7920",
+          "tokenOutput": "231989565.332101",
+          "totalFeeUsdc": "80",
+          "protocolFeeUsdc": "16",
+          "averagePrice": "0.000034484310",
+          "terminalPrice": "0.000049909852",
+          "grossPriceImpactPercent": 72.42154811031536,
+          "migrationProgressPercent": 13.39462797559874,
+          "reachesMigration": false
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "curveId": "constant-liquidity",
+      "weightedTokenOutput": "557941127.528917",
+      "weightedUnspentUsdc": "0.000000",
+      "weightedMigrationProgressPercent": 58.260406516153495,
+      "yesImpactPass": false,
+      "noImpactPass": true
+    },
+    {
+      "curveId": "front-weighted",
+      "weightedTokenOutput": "628824933.968377",
+      "weightedUnspentUsdc": "715.970224",
+      "weightedMigrationProgressPercent": 70.90604544254222,
+      "yesImpactPass": true,
+      "noImpactPass": true
+    },
+    {
+      "curveId": "back-weighted",
+      "weightedTokenOutput": "457568532.526362",
+      "weightedUnspentUsdc": "0.000000",
+      "weightedMigrationProgressPercent": 47.345368190977716,
+      "yesImpactPass": false,
+      "noImpactPass": true
+    }
+  ],
+  "gates": [
+    {
+      "id": "data-provenance",
+      "state": "review",
+      "message": "Synthetic demonstration data. No live API execution or demand validation is claimed."
+    },
+    {
+      "id": "market-evidence",
+      "state": "pass",
+      "message": "Anchor market passes configured data-quality checks."
+    },
+    {
+      "id": "catalog-coverage",
+      "state": "pass",
+      "message": "Complete supplied synthetic fixture; no catalog was queried."
+    },
+    {
+      "id": "operator-review",
+      "state": "review",
+      "message": "Human review of event relevance, scenario budgets, quote mint, fees, and actual pool conditions is required."
+    },
+    {
+      "id": "impact-constant-liquidity",
+      "state": "review",
+      "message": "Constant liquidity: one or both conditional budgets exceed the configured gross execution premium limit."
+    },
+    {
+      "id": "impact-front-weighted",
+      "state": "pass",
+      "message": "Front-weighted liquidity: both conditional budgets stay within the configured gross execution premium limit."
+    },
+    {
+      "id": "impact-back-weighted",
+      "state": "review",
+      "message": "Back-weighted liquidity: one or both conditional budgets exceed the configured gross execution premium limit."
+    }
+  ],
+  "status": "review-required",
+  "assumptions": [
+    "YES/(YES+NO) is a normalized price-implied scenario weight, not a calibrated event probability or forecast of demand.",
+    "YES and NO budgets are explicit user assumptions. Other markets are diagnostics only; no independence assumption or causal relationship is inferred.",
+    "Every quote starts from an empty DBC pool, with six-decimal base and USDC-denominated quote amounts, fixed fees, and dynamic fees disabled.",
+    "One millionth of total token supply, rounded up to whole tokens, is reserved as leftover for SDK integer rounding. Partner LP is permanently locked at 100%; token authority is immutable.",
+    "Pool creation fee is zero in the diagnostic configuration. This does not imply an actual launch has zero network or protocol costs. SDK structural validation uses a nonzero local placeholder for the unassigned leftover recipient.",
+    "SDK partial fills stop at migration. Unspent input is gross requested minus gross consumed. Post-migration AMM execution is not modeled.",
+    "Gross execution premium compares average fill price including trading fees against the initial marginal price; it is not the SDK slippage tolerance.",
+    "No pool is created. Configurations are analysis artifacts; quote mint validity, on-chain state, network costs and token economics need human verification.",
+    "A recent trade sample and reported volume are not proof of organic activity. Wallet counts are descriptive, not unique-person counts."
+  ]
+}

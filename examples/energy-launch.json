@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "name": "Community energy launch rehearsal",
+  "anchorMarketId": "SyntheticClimateReadiness111",
+  "purpose": "Rehearse conditional launch budgets for a community energy coordination token; the event link and both budgets are hypothetical operator assumptions, not demand forecasts.",
+  "tokenSupply": 1000000000,
+  "initialMarketCap": 20000,
+  "migrationMarketCap": 200000,
+  "tradingFeeBps": 100,
+  "quoteDecimals": 6,
+  "baseDecimals": 6,
+  "quoteUnit": "USDC",
+  "budgets": {
+    "yes": "40000",
+    "no": "8000"
+  },
+  "probeAmounts": [
+    "100",
+    "250",
+    "500",
+    "1000",
+    "2500",
+    "5000",
+    "8000",
+    "10000",
+    "15000",
+    "20000",
+    "30000",
+    "40000",
+    "60000",
+    "100000"
+  ],
+  "guardrails": {
+    "maxPriceImpactPercent": 160,
+    "minVolumeUsdc": "10000",
+    "minRecentTrades": 5,
+    "maxSnapshotAgeMinutes": 30,
+    "maxTradeAgeMinutes": 60,
+    "maxComplementGap": 0.05
+  }
+}

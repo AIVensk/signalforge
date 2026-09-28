@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "mode": "synthetic-fixture",
+    "source": "Independent fixtures matching Panta API v1 documentation; not downloaded market data",
+    "capturedAt": "2026-09-28T16:00:00Z",
+    "complete": true,
+    "pages": 1,
+    "notes": [
+      "All titles, market IDs, prices, volumes, wallets and signatures are invented test data.",
+      "This fixture is intentionally mixed quality: one qualified anchor, a stale/thin example, and a null-price catalog example."
+    ]
+  },
+  "markets": [
+    {
+      "market": {
+        "marketId": "SyntheticClimateReadiness111",
+        "category": "climate",
+        "title": "Will the illustrative community energy pilot meet its October milestone?",
+        "description": "INDEPENDENT SYNTHETIC FIXTURE. This illustrative market does not exist on Panta. It tests the documented API response schema.",
+        "phase": "secondary",
+        "marketType": "standard",
+        "startTime": 1790524800,
+        "endTime": 1791216000,
+        "resolutionTime": 1791302400,
+        "resolved": false,
+        "region": "Global",
+        "status": "secondary",
+        "volumeUsdc": "185420.50",
+        "yesPrice": "0.64",
+        "noPrice": "0.37",
+        "primaryYesPrice": null,
+        "primaryNoPrice": null,
+        "secondaryYesPrice": "0.64",
+        "secondaryNoPrice": "0.37",
+        "images": [],
+        "campaignId": null,
+        "createdByPartner": false
+      },
+      "trades": [
+        {
+          "id": "synthetic-0-0",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet0",
+          "isPrimary": false,
+          "yesAmount": "100",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790611140,
+          "signature": "SYNTHETIC_SIGNATURE_0_0",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-1",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet1",
+          "isPrimary": false,
+          "yesAmount": "110",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790611080,
+          "signature": "SYNTHETIC_SIGNATURE_0_1",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-2",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet2",
+          "isPrimary": false,
+          "yesAmount": "120",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790611020,
+          "signature": "SYNTHETIC_SIGNATURE_0_2",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-3",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet3",
+          "isPrimary": false,
+          "yesAmount": "130",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610960,
+          "signature": "SYNTHETIC_SIGNATURE_0_3",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-4",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet0",
+          "isPrimary": false,
+          "yesAmount": "140",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610900,
+          "signature": "SYNTHETIC_SIGNATURE_0_4",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-5",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet1",
+          "isPrimary": false,
+          "yesAmount": "150",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610840,
+          "signature": "SYNTHETIC_SIGNATURE_0_5",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-6",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet2",
+          "isPrimary": false,
+          "yesAmount": "160",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610780,
+          "signature": "SYNTHETIC_SIGNATURE_0_6",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-7",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet3",
+          "isPrimary": false,
+          "yesAmount": "170",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610720,
+          "signature": "SYNTHETIC_SIGNATURE_0_7",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-8",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet0",
+          "isPrimary": false,
+          "yesAmount": "180",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610660,
+          "signature": "SYNTHETIC_SIGNATURE_0_8",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-9",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet1",
+          "isPrimary": false,
+          "yesAmount": "190",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610600,
+          "signature": "SYNTHETIC_SIGNATURE_0_9",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-10",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet2",
+          "isPrimary": false,
+          "yesAmount": "200",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610540,
+          "signature": "SYNTHETIC_SIGNATURE_0_10",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-0-11",
+          "marketId": "SyntheticClimateReadiness111",
+          "wallet": "SyntheticWallet3",
+          "isPrimary": false,
+          "yesAmount": "210",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790610480,
+          "signature": "SYNTHETIC_SIGNATURE_0_11",
+          "quoteAsset": "USDC"
+        }
+      ],
+      "detailAvailable": true,
+      "tradesAvailable": true,
+      "warnings": []
+    },
+    {
+      "market": {
+        "marketId": "SyntheticGridCapacity222",
+        "category": "climate",
+        "title": "Will the illustrative grid expansion clear its next readiness review?",
+        "description": "INDEPENDENT SYNTHETIC FIXTURE. This illustrative market does not exist on Panta. It tests the documented API response schema.",
+        "phase": "secondary",
+        "marketType": "standard",
+        "startTime": 1790524800,
+        "endTime": 1791216000,
+        "resolutionTime": 1791302400,
+        "resolved": false,
+        "region": "Global",
+        "status": "secondary",
+        "volumeUsdc": "860",
+        "yesPrice": "0.78",
+        "noPrice": "0.30",
+        "primaryYesPrice": null,
+        "primaryNoPrice": null,
+        "secondaryYesPrice": "0.78",
+        "secondaryNoPrice": "0.30",
+        "images": [],
+        "campaignId": null,
+        "createdByPartner": false
+      },
+      "trades": [
+        {
+          "id": "synthetic-1-0",
+          "marketId": "SyntheticGridCapacity222",
+          "wallet": "SyntheticWallet0",
+          "isPrimary": false,
+          "yesAmount": "100",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790604000,
+          "signature": "SYNTHETIC_SIGNATURE_1_0",
+          "quoteAsset": "USDC"
+        },
+        {
+          "id": "synthetic-1-1",
+          "marketId": "SyntheticGridCapacity222",
+          "wallet": "SyntheticWallet1",
+          "isPrimary": false,
+          "yesAmount": "110",
+          "noAmount": "0",
+          "feePaid": "1",
+          "blockTime": 1790596800,
+          "signature": "SYNTHETIC_SIGNATURE_1_1",
+          "quoteAsset": "USDC"
+        }
+      ],
+      "detailAvailable": true,
+      "tradesAvailable": true,
+      "warnings": []
+    },
+    {
+      "market": {
+        "marketId": "SyntheticUnpricedMarket333",
+        "category": "climate",
+        "title": "Will the illustrative storage pilot publish validated test results?",
+        "description": "INDEPENDENT SYNTHETIC FIXTURE. This illustrative market does not exist on Panta. It tests the documented API response schema.",
+        "phase": "secondary",
+        "marketType": "standard",
+        "startTime": 1790524800,
+        "endTime": 1791216000,
+        "resolutionTime": 1791302400,
+        "resolved": false,
+        "region": "Global",
+        "status": "secondary",
+        "volumeUsdc": "74000",
+        "yesPrice": null,
+        "noPrice": null,
+        "primaryYesPrice": null,
+        "primaryNoPrice": null,
+        "secondaryYesPrice": null,
+        "secondaryNoPrice": null,
+        "images": [],
+        "campaignId": null,
+        "createdByPartner": false
+      },
+      "trades": [],
+      "detailAvailable": false,
+      "tradesAvailable": false,
+      "warnings": [
+        "DETAIL_READ_FAILED"
+      ]
+    }
+  ]
+}
