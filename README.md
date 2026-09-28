@@ -4,9 +4,9 @@
 
 SignalForge connects a chosen prediction-market event to two explicit, operator-defined budget scenarios, then uses the official Meteora SDK to compare how those budgets fill across three bonding curves. It shows missing evidence, fees, migration boundaries, and unused input instead of hiding them inside a single score.
 
-The bundled demonstration uses **invented Panta markets and trades with real Meteora SDK calculations**. It is a local, working prototype. Live Panta capture has not been executed because no authorized API key was available. Source/demo publication does not register or submit a contest entry. No mainnet deployment, trade, successful live capture, or prize is claimed.
+The bundled demonstration uses **invented Panta markets and trades with real Meteora SDK calculations**. It is a working prototype with public source and a live static demonstration. Live Panta capture has not been executed because no authorized API key was available. Source/demo publication does not register or submit a contest entry. No mainnet deployment, trade, successful live capture, or prize is claimed.
 
-[Browse the saved demonstration](docs/index.html) · [Submission dossier](docs/SUBMISSION.md) · [Rules and licensing notes](docs/RULES-REVIEW.md)
+[Open the live demonstration](https://aivensk.github.io/signalforge/) · [Six-slide pitch](https://aivensk.github.io/signalforge/pitch.html) · [Submission dossier](docs/SUBMISSION.md) · [Rules and licensing notes](docs/RULES-REVIEW.md)
 
 ## Run the demonstration
 
